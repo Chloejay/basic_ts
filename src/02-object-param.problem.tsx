@@ -4,6 +4,20 @@ export const addTwoNumbers = (params: { first: number; second: number }) => {
   return params.first + params.second;
 };
 
+interface Props{
+  className: string 
+
+}
+
+// or 
+export type ButtonProps = {
+  className: string
+}
+const Button: React.FC<Props> = (props) => {
+  <button className={props.className}> test </button>
+}
+
+{/* <Button> test</Button> */}
 it("Should add the two numbers together", () => {
   expect(
     addTwoNumbers({
